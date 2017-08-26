@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/xyaz"
+    android:orientation="vertical"
+    tools:context="com.fanny.healthcare.activity.XYJCActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
+            android:text="血压状况"
+            android:textColor="@color/xy_level0"
+            android:textSize="50sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_nibp_sys"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                   android:layout_marginTop="30dp"
+                    android:text="- -"
+                    android:textColor="@color/colorXYAText"
+                    android:textSize="100sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/tv_nibp_dia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="- -"
+                    android:textColor="@color/colorXYAText"
+                    android:textSize="100sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/tv_nibp_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="- -"
+                    android:textColor="@color/colorXYAText"
+                    android:textSize="100sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/tv_nibp_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="- -"
+                    android:textColor="@color/colorXYAText"
+                    android:textSize="100sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/im_heart"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/heart_big"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_start_xyjc"
+                    android:textSize="30sp"
+                    android:background="@drawable/ripple_bg"
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:text="开始测量"
+                    android:textColor="@color/colorXYAText"/>
+                <Button
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btn_save_xueya"
+                    android:textSize="30sp"
+                    android:background="@drawable/ripple_bg"
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:text="保存数据"
+                    android:textColor="@color/colorXYAText"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.3"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:text="测量模式:"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--<RadioGroup-->
+    <!--android:id="@+id/rb_group"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_adult"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:checked="true"-->
+    <!--android:text="成人模式"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_child"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:text="儿童模式"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_baby"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="婴幼儿模式"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--</RadioGroup>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.3"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="30dp"-->
+    <!--android:text="初始压力值:"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/sp_nibp_data"-->
+    <!--android:layout_width="180dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:entries="@array/nibp_adult_scope" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="mmHg"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="3"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="3">-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@mipmap/circle_cherry" />&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_nibp_sys"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="- -"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="50sp" />-->
+
+    <!--</FrameLayout>-->
+
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:gravity="center"-->
+    <!--android:text="收缩压(sys) / mmHg"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="3">-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@mipmap/circle_cherry" />&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:layout_gravity="center"-->
+    <!--android:id="@+id/tv_nibp_dia"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="- -"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="50sp" />-->
+
+    <!--</FrameLayout>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:gravity="center"-->
+    <!--android:text="舒张压(dia) / mmHg"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="3">-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@mipmap/circle_cherry" />&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:layout_gravity="center"-->
+    <!--android:id="@+id/tv_nibp_pr"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="- -"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="50sp" />-->
+
+    <!--</FrameLayout>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:gravity="center"-->
+    <!--android:text="脉率(plus) / bpm"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="3">-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="240dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@mipmap/circle_cherry" />&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_nibp_map"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="- -"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="50sp"  />-->
+
+    <!--</FrameLayout>-->
+    <!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:text="平均压(map) / mmHg"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:gravity="center">-->
+
+    <!--<Button-->
+    <!--android:textColor="#fff"-->
+    <!--android:id="@+id/btn_start_xyjc"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginRight="80dp"-->
+    <!--android:background="@drawable/ripple_bg_cherry"-->
+    <!--android:text="开始测量"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textSize="20sp" />-->
+
+    <!--<Button-->
+    <!--android:textColor="#fff"-->
+    <!--android:id="@+id/btn_save_xueya"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/ripple_bg_cherry"-->
+    <!--android:text="保存数据"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textSize="20sp" />-->
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

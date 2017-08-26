@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/xd"
+    tools:context="com.fanny.healthcare.activity.XYJCActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5">
+
+            <TextView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_heart_rate"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="80sp"
+                android:text="66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="bmp \n \n 次／每分"
+                android:layout_toRightOf="@id/tv_heart_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Button
+                android:background="@drawable/ripple_bg"
+                android:text="保存数据"
+                android:id="@+id/btn_save_xindian"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <com.creative.draw.ECG12SurfaceView
+            android:layout_margin="30dp"
+        android:id="@+id/ecg12_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_bg"
+        android:text="ECG Start" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="心率HR："
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="- -"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="time："
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- -"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <!--       <com.creative.draw.ECGSurfaceView
+        android:id="@+id/sv_ecg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />-->
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <com.creative.drawWave.BaseDraw.GridBackground
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <com.creative.drawWave.ECGView.ECGView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="心电结果："
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- -"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F00" />
+
+        </LinearLayout>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFA500" />
+
+        </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:layout_marginLeft="35dp"
+                android:id="@+id/btn_ecg_start"
+                android:background="@mipmap/xdbtn_2"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_marginRight="30dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="测量时间"/>
+            <TextView
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="50sp"
+                android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="00:00:00"
+            android:id="@+id/tv_time" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="走速"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <RadioButton
+
+                    android:id="@+id/speed_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6.25mm/s"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/speed_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12.5mm/s"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/speed_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="25mm/s"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/speed_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50mm/s"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="增益"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:id="@+id/rg_gain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/gain_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="5mm/mV"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/gain_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10mm/mV"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/gain_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20mm/mV"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="filter"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="0.5"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_ecg_start"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:text="开始" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_ecg_stop"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:text="停止" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_filter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:text="滤波设置" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bt_filterPara"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:text="滤波参数" />-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:text="00:00"-->
+            <!--android:id="@+id/tv_time" />-->
+
+        <!--<Button-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/btn_save_xindian"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:text="保存数据"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1.5"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="设置走速" />-->
+
+            <!--<RadioGroup-->
+                <!--android:id="@+id/rg_speed"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="20dp">-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/speed_0"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="6.25mm/s" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/speed_1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="12.5mm/s" />-->
+
+                <!--<RadioButton-->
+                    <!--android:checked="true"-->
+                    <!--android:id="@+id/speed_2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="25mm/s" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/speed_3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="50mm/s" />-->
+            <!--</RadioGroup>-->
+
+            <!--&lt;!&ndash; <TextView-->
+                 <!--android:layout_width="wrap_content"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                 <!--android:layout_marginLeft="20dp"-->
+                 <!--android:textColor="@color/colorAccent"-->
+                 <!--android:text="- -"-->
+                 <!--android:id="@+id/tv_heart_rate" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="设置增益" />-->
+
+            <!--<RadioGroup-->
+                <!--android:id="@+id/rg_gain"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="20dp">-->
+
+                <!--<RadioButton-->
+                    <!--android:checked="true"-->
+                    <!--android:id="@+id/gain_0"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="5mm/mV" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/gain_1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="10mm/mV" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/gain_2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="20mm/mV" />-->
+
+            <!--</RadioGroup>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_filter"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:text="filter"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="0.5">-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_leadFall"-->
+            <!--android:layout_width="450dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textColor="@color/colorAccent" />-->
+
+        <!--<TextView-->
+            <!--android:text="- -"-->
+            <!--android:id="@+id/tv_saturation"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="70dp"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textColor="@color/colorAccent" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_heart_rate"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="35dp"-->
+            <!--android:text="- -"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:textColor="@color/colorAccent" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="4">-->
+
+        <!--<com.creative.draw.ECG12SurfaceView-->
+            <!--android:id="@+id/ecg12_surfaceview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/ripple_bg"-->
+                    <!--android:text="ECG Start" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--android:text="心率HR："-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:text="- -"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--android:text="time："-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="- -"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash;       <com.creative.draw.ECGSurfaceView-->
+                       <!--android:id="@+id/sv_ecg"-->
+                       <!--android:layout_width="match_parent"-->
+                       <!--android:layout_height="200dp"-->
+                       <!--/>&ndash;&gt;-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginTop="5dp">-->
+
+                <!--<com.creative.drawWave.BaseDraw.GridBackground-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" />-->
+
+                <!--<com.creative.drawWave.ECGView.ECGView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="心电结果："-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="- -"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                    <!--android:textColor="#F00" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:textColor="#FFA500" />-->
+
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+

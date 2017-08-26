@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <!-- 设置基线滤波参数 -->
+    <TextView
+        android:id="@+id/title_fpfilter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:gravity="center_horizontal"
+        android:text="设置基线滤波参数"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/fpfilterflag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fpfilter"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/fpfilterflagoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="关" />
+
+        <RadioButton
+            android:id="@+id/fpfilterflagon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开" />
+    </RadioGroup>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_defval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fpfilterflag">
+
+        <EditText
+            android:id="@+id/fpfilterflag_defval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="如果输入信号大于该值时自动复位高通滤波" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_ts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ti_defval">
+
+        <EditText
+            android:id="@+id/fpfilterflag_ts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="复位的延时时间" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_recover_ts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ti_ts">
+
+        <EditText
+            android:id="@+id/fpfilterflag_recover_ts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="复位操作持续时间" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ti_recover_ts">
+
+        <EditText
+            android:id="@+id/fpfilterflag_frq"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="复位期间滤波器截止频率" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/fpfilterflag_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="确认" />
+
+
+</RelativeLayout>

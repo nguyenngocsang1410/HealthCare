@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--    <ImageView
+            android:id="@+id/iv_idcardinfo_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_idcardinfo_name"
+            style="@style/IDCardInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名:" />
+
+        <TextView
+            android:id="@+id/tv_idcardinfo_sex"
+            style="@style/IDCardInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别:" />
+
+        <TextView
+            android:id="@+id/tv_idcardinfo_nation"
+            style="@style/IDCardInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="民族:" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_idcardinfo_birthday"
+        style="@style/IDCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出生日期:" />
+
+    <TextView
+        android:id="@+id/tv_idcardinfo_address"
+        style="@style/IDCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="住址:" />
+
+    <TextView
+        android:id="@+id/tv_idcardinfo_number"
+        style="@style/IDCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="公民身份号码:" />
+
+    <TextView
+        android:id="@+id/tv_idcardinfo_grantdept"
+        style="@style/IDCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="签发证机关:" />
+
+    <TextView
+        android:id="@+id/tv_idcardinfo_valid_day"
+        style="@style/IDCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="有效期限:" />
+
+    <TextView
+        android:id="@+id/tv_login_tag"
+        style="@style/IDCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户是否注册：" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_start"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ripple_bg"
+            android:text="开始扫描" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ripple_bg"
+            android:text="停止扫描" />
+
+        <ProgressBar
+            android:id="@+id/pb_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:gravity="fill"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="data_temp">#898b0a</color>
+    <color name="gridviewbg">#fff</color>
+    <color name="data_spo2">#b939bb</color>
+    <color name="data_pr">#0a7b14</color>
+
+    <color name="google_red">#EA4335</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
+
+    <color name="bg_green">#2bd021</color>
+    <color name="bg_cherry">#ca0067</color>
+    <color name="bg_red">#f51800</color>
+    <color name="bg_press">#aeb2a7</color>
+    <color name="bg_yellow">#e9e31e</color>
+    <color name="bg_skyblue">#7cc0e8</color>
+
+    <color name="colorXYAText">#d2d350</color>
+    <color name="xy_level0">#5f9b79</color>
+    <color name="xy_level1">#98cb7e</color>
+    <color name="xy_level2">#d2dd77</color>
+    <color name="xy_level3">#ecc56b</color>
+    <color name="xy_level4">#de9153</color>
+    <color name="xy_level5">#d0555a</color>
+
+    <color name="ecg_bg">#364e78</color>
+    <color name="ecg_wave">#ffffff</color>
+    <color name="ecr_lead">#182e57</color>
+</resources>
