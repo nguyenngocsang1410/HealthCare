@@ -1,19 +1,28 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+}
+
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
 
     aaptOptions {
         cruncherEnabled = false
         useNewCruncher = false
+    }
+    lintOptions {
+        abortOnError false
     }
 
 
     defaultConfig {
         applicationId "com.fanny.healthcare"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -41,7 +50,7 @@ dependencies {
     compile files('libs/BDETrans.jar')
     compile files('libs/CreativeHealth_pod.jar')
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'devlight.io:navigationtabbar:1.2.5'
     compile 'com.romandanylyk:pageindicatorview:0.2.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
